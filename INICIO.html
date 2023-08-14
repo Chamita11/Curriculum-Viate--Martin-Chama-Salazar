@@ -124,41 +124,5 @@
         <img id="modalImage" src="" alt="Imagen en modal" onclick="closeModal()">
     </div>
     
-    <script>
-        function showTab(tabId) {
-            const tabs = document.querySelectorAll('.container');
-            tabs.forEach(tab => {
-                if (tab.id === tabId) {
-                    tab.style.display = 'block';
-                } else {
-                    tab.style.display = 'none';
-                }
-            });
-
-            const activeTabs = document.querySelectorAll('.tab');
-            activeTabs.forEach(activeTab => {
-                if (activeTab.getAttribute('onclick').includes(tabId)) {
-                    activeTab.classList.add('active');
-                } else {
-                    activeTab.classList.remove('active');
-                }
-            });
-        }
-
-        function openModal(imageSrc) {
-            const modal = document.getElementById("modal");
-            const modalImage = document.getElementById("modalImage");
-            modalImage.src = imageSrc;
-            modal.style.display = "flex";
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("modal");
-            modal.style.display = "none";
-        }
-
-        // Mostrar la primera pestaña al cargar la página
-        showTab('datosPersonales');
-    </script>
-</body>
+   </body>
 </html>
